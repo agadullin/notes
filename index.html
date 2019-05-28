@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.common.dev.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+          <input type="textarea" v-model="notes">
+          <button v-on:click="addNotes">add notes</button>
+       </div>
+       <div>
+           <div v-if="showNotes">
+              <p> {{arrNotes[0]}} </p>
+              <p> {{arrNotes[1]}} </p>
+              <p> {{arrNotes[2]}} </p>
+           </div>
+            <div v-else>
+                <div v-for="item in arrNotes">
+                  <p>{{item}}</p>
+                </div>
+           </div>
+       </div>
+    </div>
+<script src="./main.js"></script>
+</body>
+</html>
