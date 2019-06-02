@@ -1,0 +1,8 @@
+.lock{
+    display: none;
+}
+
+
+.block:hover .lock{
+    display: inline-block;
+}

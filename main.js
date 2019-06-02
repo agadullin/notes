@@ -4,12 +4,19 @@ var vm = new Vue({
         text:"",
         notes : "",
         showNotes: true,
-        arrNotes: []
+        arrNotes: [],
     },
     methods: {
         addNotes() {
             this.arrNotes.unshift(this.notes);
             this.notes = "";
+        },
+        show() {
+            this.showNotes = !this.showNotes
+        },
+        deleteNotes(event,) {
+          event.target.parentNode.remove();
         }
-    }
+    },
+
 })

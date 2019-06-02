@@ -15,14 +15,15 @@
           <button v-on:click="addNotes">add notes</button>
        </div>
        <div>
+           <button @click="show">show all</button>
            <div v-if="showNotes">
-              <p> {{arrNotes[0]}} </p>
-              <p> {{arrNotes[1]}} </p>
-              <p> {{arrNotes[2]}} </p>
+              <p class="block"> {{arrNotes[0]}} <button @click="deleteNotes" class="lock">delete</button></p>
+              <p class="block"> {{arrNotes[1]}} <button @click="deleteNotes" class="lock">delete</button></p>
+              <p class="block"> {{arrNotes[2]}} <button @click="deleteNotes" class="lock">delete</button></p>
            </div>
             <div v-else>
                 <div v-for="item in arrNotes">
-                  <p>{{item}}</p>
+                  <p class="block">{{item}} <button @click="deleteNotes" class="lock">delete</button></p>
                 </div>
            </div>
        </div>
